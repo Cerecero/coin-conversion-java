@@ -6,9 +6,8 @@ class gui{
         frame.setSize(300,400);
         //JButton button1 = new JButton("Press");
         //frame.getContentPane().add(button1);
-        //frame.setVisible(true);
-        Text test = new Text();
-        frame.add(test);
+
+        frame.setVisible(true);
 
 
 
