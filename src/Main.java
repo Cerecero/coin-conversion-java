@@ -7,7 +7,10 @@ class gui{
         frame.setResizable(false);
         //JButton button1 = new JButton("Press");
         //frame.getContentPane().add(button1);
+        ImageIcon image = new ImageIcon("alura.svg");
+        frame.setIconImage(image.getImage());
 
+        
         frame.setVisible(true);
     }
 
