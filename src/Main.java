@@ -1,17 +1,14 @@
 import javax.swing.*;
+import java.awt.*;
+
 class gui{
     public static void main(String args[]){
-        JFrame frame = new JFrame("Alura Challenge");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(300,400);
-        frame.setResizable(false);
-        //JButton button1 = new JButton("Press");
-        //frame.getContentPane().add(button1);
-        ImageIcon image = new ImageIcon("alura.svg");
-        frame.setIconImage(image.getImage());
+        //JFrame frame = new JFrame("Alura Challenge");
 
-        
-        frame.setVisible(true);
+
+
+        //frame.setVisible(true);
+        new MainFrame();
     }
 
 }
