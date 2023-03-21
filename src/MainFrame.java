@@ -4,10 +4,10 @@ import java.awt.*;
 public class MainFrame extends JFrame {
 
     MainFrame(){
-        this.setTitle("Alura Challenge");
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(300,200);
-        this.setResizable(false);
+        setTitle("Alura Challenge");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(300,200);
+        setResizable(false);
         //JButton button1 = new JButton("Press"); //frame.getContentPane().add(button1);
 
         ImageIcon image = new ImageIcon("alura.svg");
@@ -19,6 +19,6 @@ public class MainFrame extends JFrame {
 
         add(inputField);
 
-        this.setVisible(true);
+        setVisible(true);
     }
 }
