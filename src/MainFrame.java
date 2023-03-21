@@ -10,14 +10,17 @@ public class MainFrame extends JFrame {
         setResizable(false);
         //JButton button1 = new JButton("Press"); //frame.getContentPane().add(button1);
 
-        ImageIcon image = new ImageIcon("alura.svg");
+        //ImageIcon image = new ImageIcon("alura.svg");
         this.getContentPane().setBackground(new Color( 0xD8DFE8));
-        this.setIconImage(image.getImage());
+        //this.setIconImage(image.getImage());
+        String[] options = {"Conversion de monedas", "Conversion de Temperatura"};
+        JComboBox<String> dropdown = new JComboBox<>(options);
+        dropdown.setBounds(0,0,10,30);
+        add(dropdown);
+        //JTextField inputField = new JTextField();
+        //inputField.setBounds(50,50,150,30);
 
-        JTextField inputField = new JTextField();
-        inputField.setBounds(50,50,150,30);
-
-        add(inputField);
+        //add(inputField);
 
         setVisible(true);
     }
