@@ -10,7 +10,8 @@ class gui{
         //label.setHorizontalAlignment(JLabel.CENTER);
         //frame.setVisible(true);
         MainFrame frame = new MainFrame();
+        //new MainFrame();
+        frame.setVisible(true);
         //frame.add(label);
     }
-
 }
