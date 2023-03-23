@@ -3,10 +3,12 @@ import java.util.Scanner;
 public class Temperature {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your name: ");
-        String name = scanner.nextLine();
-        System.out.println("Hello, " + name + "!");
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the money you wish to convert: ");
+        String money = input.nextLine();
+        System.out.println("this is your money"+money);
+
+
     }
 
 }
