@@ -32,6 +32,6 @@ public class MainFrame extends JFrame {
 
         //add(inputField);
 
-        this.setVisible(true);
+        setVisible(true);
     }
 }
