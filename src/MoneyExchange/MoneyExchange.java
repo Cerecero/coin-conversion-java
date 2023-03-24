@@ -33,9 +33,15 @@ public class MoneyExchange {
         CADamount = (double) Math.round(CADamount * 100d)/100;
         return CADamount;
     }
+    public double ExchangeCHFtoMXN(double input){
+        double exchangeRateCHF = 0.050;
+        double CHFamount = input / exchangeRateCHF;
+        CHFamount = (double) Math.round(CHFamount * 100d)/100;
+        return CHFamount;
+    }
 
     /*
-     * CAD
+     * CAD X
      * CHF
      * CNH
      * HKD

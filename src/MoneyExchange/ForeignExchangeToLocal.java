@@ -32,4 +32,10 @@ public class ForeignExchangeToLocal {
         CADamount = (double) Math.round(CADamount * 100d)/100;
         return CADamount;
     }
+    public double ExchangeMXNtoCHF(double input){
+        double exchangeRateCHF = 0.050;
+        double CHFamount = input * exchangeRateCHF;
+        CHFamount = (double) Math.round(CHFamount * 100d)/100;
+        return CHFamount;
+    }
 }
