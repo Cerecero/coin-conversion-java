@@ -1,7 +1,7 @@
 package MoneyExchange;
 
 public class ForeignExchangeToLocal {
-    public double ExchangePesoToDollars(double input) { /*Make it return void...maybe*/
+    public double ExchangeMXNtoUSD(double input) { /*Make it return void...maybe*/
         double exchangeRateUSD = 0.054;
         double dolarAmount = input * exchangeRateUSD;
         dolarAmount = (double) Math.round(dolarAmount * 100d)/100;
