@@ -44,4 +44,10 @@ public class ForeignExchangeToLocal {
         CNHamount = (double) Math.round(CNHamount * 100d)/100;
         return CNHamount;
     }
+    public double ExchangeMXNtoHKD(double input){
+        double exchangeRateHKD = 0.43;
+        double HKDamount = input * exchangeRateHKD;
+        HKDamount = (double) Math.round(HKDamount * 100d)/100;
+        return HKDamount;
+    }
 }
