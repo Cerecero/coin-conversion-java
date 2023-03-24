@@ -38,4 +38,10 @@ public class ForeignExchangeToLocal {
         CHFamount = (double) Math.round(CHFamount * 100d)/100;
         return CHFamount;
     }
+    public double ExchangeMXNtoCNH(double input){
+        double exchangeRateCNH = 0.37;
+        double CNHamount = input * exchangeRateCNH;
+        CNHamount = (double) Math.round(CNHamount * 100d)/100;
+        return CNHamount;
+    }
 }
