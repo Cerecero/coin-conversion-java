@@ -15,9 +15,16 @@ public class MoneyExchange {
         EUROamount = (double) Math.round(EUROamount * 100d)/100;
         return EUROamount;
     }
+    public double ExchangeYENtoMXN(double input){
+        double exchangeRateYEN = 7.08;
+        double YENamount = input / exchangeRateYEN;
+        YENamount = (double) Math.round(YENamount * 100d)/100;
+        return YENamount;
+    }
+
     /* USD X
      * EURO X
-     * Japanese Yen
+     * Japanese Yen X
      * AUD
      * CAD
      * CHF

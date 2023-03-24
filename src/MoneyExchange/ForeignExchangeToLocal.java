@@ -14,4 +14,10 @@ public class ForeignExchangeToLocal {
         EUROAmount = (double) Math.round(EUROAmount * 100d)/100;
         return EUROAmount;
     }
+    public double ExchangeMXNtoYEN(double input) {
+        double exchangeRateYEN = 7.08;
+        double YENAmount = input * exchangeRateYEN;
+        YENAmount = (double) Math.round(YENAmount * 100d)/100;
+        return YENAmount;
+    }
 }
