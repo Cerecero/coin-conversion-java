@@ -51,19 +51,12 @@ public class MoneyExchange {
         HKDamount = (double) Math.round(HKDamount * 100d)/100;
         return HKDamount;
     }
-
-    /*
-     * CAD X
-     * CHF X
-     * CNH X
-     * HKD
-     * NZD
-     *
-     * USD X
-     * EURO X
-     * Japanese Yen X
-     * AUD X
-     * */
+    public double ExchangeNZDtoMXN(double input){
+        double exchangeRateNZD = 0.087;
+        double NZDamount = input / exchangeRateNZD;
+        NZDamount = (double) Math.round(NZDamount * 100d)/100;
+        return NZDamount;
+    }
 
 
 }

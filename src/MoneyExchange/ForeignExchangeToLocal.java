@@ -50,4 +50,10 @@ public class ForeignExchangeToLocal {
         HKDamount = (double) Math.round(HKDamount * 100d)/100;
         return HKDamount;
     }
+    public double ExchangeMXNtoNZD(double input){
+        double exchangeRateNZD = 0.087;
+        double NZDamount = input * exchangeRateNZD;
+        NZDamount = (double) Math.round(NZDamount * 100d)/100;
+        return NZDamount;
+    }
 }
