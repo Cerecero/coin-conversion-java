@@ -21,6 +21,12 @@ public class MoneyExchange {
         YENamount = (double) Math.round(YENamount * 100d)/100;
         return YENamount;
     }
+    public double ExchangeAUDtoMXN(double input){
+        double exchangeRateAUD = 0.081;
+        double AUDamount = input / exchangeRateAUD;
+        AUDamount = (double) Math.round(AUDamount * 100d)/100;
+        return AUDamount;
+    }
 
     /* USD X
      * EURO X

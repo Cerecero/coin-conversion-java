@@ -20,4 +20,10 @@ public class ForeignExchangeToLocal {
         YENAmount = (double) Math.round(YENAmount * 100d)/100;
         return YENAmount;
     }
+    public double ExchangeMXNtoAUD(double input) {
+        double exchangeRateAUD = 0.081;
+        double AUDAmount = input * exchangeRateAUD;
+        AUDAmount = (double) Math.round(AUDAmount * 100d)/100;
+        return AUDAmount;
+    }
 }
