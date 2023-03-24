@@ -9,6 +9,22 @@ public class MoneyExchange {
         return dolarAmount;
         /*Here goes the message to show the user the result*/
     }
+    public double ExchangeEUROtoMXN(double input){
+        double exchangeRateEURO = 0.050;
+        double EUROamount = input / exchangeRateEURO;
+        EUROamount = (double) Math.round(EUROamount * 100d)/100;
+        return EUROamount;
+    }
+    /* USD X
+     * EURO X
+     * Japanese Yen
+     * AUD
+     * CAD
+     * CHF
+     * CNH
+     * HKD
+     * NZD
+     * */
 
 
 }

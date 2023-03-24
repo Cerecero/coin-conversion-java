@@ -8,4 +8,10 @@ public class ForeignExchangeToLocal {
         return dolarAmount;
         /*Here goes the message to show the user the result*/
     }
+    public double ExchangeMXNtoEURO(double input) {
+        double exchangeRateEURO = 0.050;
+        double EUROAmount = input * exchangeRateEURO;
+        EUROAmount = (double) Math.round(EUROAmount * 100d)/100;
+        return EUROAmount;
+    }
 }
