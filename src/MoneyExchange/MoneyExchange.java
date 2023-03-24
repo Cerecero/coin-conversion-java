@@ -27,16 +27,24 @@ public class MoneyExchange {
         AUDamount = (double) Math.round(AUDamount * 100d)/100;
         return AUDamount;
     }
+    public double ExchangeCADtoMXN(double input){
+        double exchangeRateCAD = 0.074;
+        double CADamount = input / exchangeRateCAD;
+        CADamount = (double) Math.round(CADamount * 100d)/100;
+        return CADamount;
+    }
 
-    /* USD X
-     * EURO X
-     * Japanese Yen X
-     * AUD
+    /*
      * CAD
      * CHF
      * CNH
      * HKD
      * NZD
+     *
+     * USD X
+     * EURO X
+     * Japanese Yen X
+     * AUD X
      * */
 
 
