@@ -10,7 +10,8 @@ public class MainFrame extends JFrame {
         setResizable(false);
 
         JPanel MainPanel = new JPanel();
-        MainPanel.setLayout(new BoxLayout(MainPanel, BoxLayout.Y_AXIS));
+        //MainPanel.setLayout(new BoxLayout(MainPanel, BoxLayout.Y_AXIS));
+        MainPanel.setLayout(new FlowLayout());
         add(MainPanel);
 
         JLabel label = new JLabel("Seleccione una opcion de conversion:");
@@ -27,7 +28,7 @@ public class MainFrame extends JFrame {
         MainPanel.add(dropdown);
 
         JButton button = new JButton("Next");
-        button.setBounds(100,50, 50, 20);
+        button.setBounds(50,50, 50, 20);
         MainPanel.add(button);
 
         setVisible(true);
