@@ -1,3 +1,5 @@
+import MoneyExchange.MoneyFrame;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -38,9 +40,9 @@ public class MainFrame extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String selection = (String) dropdown.getSelectedItem();
                 if (selection.equals("Conversion de monedas")) {
-
+                    MoneyFrame money = new MoneyFrame();
                 } else if (selection.equals("Conversion de Temperatura")){
-                    
+
                 }
             }
         });
