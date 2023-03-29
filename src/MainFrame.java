@@ -37,7 +37,11 @@ public class MainFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String selection = (String) dropdown.getSelectedItem();
+                if (selection.equals("Conversion de monedas")) {
 
+                } else if (selection.equals("Conversion de Temperatura")){
+                    
+                }
             }
         });
         MainPanel.add(button);
