@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MainFrame extends JFrame {
 
@@ -19,16 +21,25 @@ public class MainFrame extends JFrame {
         label.setBounds(15,20,30,40);
         MainPanel.add(label);
 
-        getContentPane().setBackground(new Color( 0xD8DFE8)); //Sets the background color
-
         /*CREATES A DROPDOWN MENU*/
         String[] options = {"Conversion de monedas", "Conversion de Temperatura"};
         JComboBox<String> dropdown = new JComboBox<>(options);
         dropdown.setBounds(50,50,10,30);
         MainPanel.add(dropdown);
 
+        //getContentPane().setBackground(new Color( 0xD8DFE8)); //Sets the background color
+
+
+        //CREATE A BUTTON
         JButton button = new JButton("Next");
         button.setBounds(50,50, 50, 20);
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String selection = (String) dropdown.getSelectedItem();
+
+            }
+        });
         MainPanel.add(button);
 
         setVisible(true);

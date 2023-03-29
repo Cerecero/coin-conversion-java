@@ -6,7 +6,5 @@ class gui{
 
         MainFrame frame = new MainFrame();
 
-        frame.setVisible(true);
-
     }
 }
