@@ -14,9 +14,9 @@ public class MoneyFrame extends JFrame {
         JPanel panel = new JPanel();
         add(panel);
 
-        NumberFormat input = NumberFormat.getIntegerInstance();
+        NumberFormat input = NumberFormat.getNumberInstance();
         JFormattedTextField textField = new JFormattedTextField(input);
-        textField.setBounds(100, 100, 100, 1000);
+        textField.setBounds(100, 100, 100, 100);
         panel.add(textField);
 
         setVisible(true);
