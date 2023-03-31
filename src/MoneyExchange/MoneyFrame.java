@@ -11,12 +11,12 @@ public class MoneyFrame extends JFrame {
         setSize(400,200);
         setResizable(false);
 
-        JPanel panel = new JPanel();
+        JPanel panel = new JPanel(new GridLayout(2,3));
         add(panel);
 
         NumberFormat input = NumberFormat.getNumberInstance();
         JFormattedTextField textField = new JFormattedTextField(input);
-        textField.setBounds(100, 100, 100, 100);
+
         panel.add(textField);
 
         setVisible(true);
