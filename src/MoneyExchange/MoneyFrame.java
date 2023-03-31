@@ -1,6 +1,8 @@
 package MoneyExchange;
 
 import javax.swing.*;
+import java.awt.*;
+import java.text.NumberFormat;
 
 public class MoneyFrame extends JFrame {
     public MoneyFrame(){
@@ -9,6 +11,10 @@ public class MoneyFrame extends JFrame {
         setSize(400,200);
         setResizable(false);
 
+        JPanel panel = new JPanel();
+        add(panel);
+
         setVisible(true);
+
     }
 }
