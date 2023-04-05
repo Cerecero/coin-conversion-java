@@ -1,14 +1,35 @@
 import MoneyExchange.MoneyFrame;
 import com.sun.tools.javac.Main;
 
+import javax.management.modelmbean.ModelMBeanAttributeInfo;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MainFrame extends JFrame {
+    public MainFrame(){
+        setTitle("MainFrame");
+        setSize(500,500);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+        JLabel label = new JLabel("Selecione el tipo de conversion que desea: ");
 
-    MainFrame(){
+        panel.add(label);
+
+        String[] options = {"Conversion de Monedas", "Conversion de Temperatura"};
+        JComboBox<String> dropdown = new JComboBox<>(options);
+        panel.add(dropdown);
+
+        add(panel, BorderLayout.NORTH);
+
+        setVisible(true);
+    }
+
+}
+
+/*public MainFrame(){
         setTitle("Alura Challenge");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400,200);
@@ -25,31 +46,30 @@ public class MainFrame extends JFrame {
         MainPanel.add(label);
 
         /*CREATES A DROPDOWN MENU*/
-        String[] options = {"Conversion de monedas", "Conversion de Temperatura"};
-        JComboBox<String> dropdown = new JComboBox<>(options);
+/*String[] options = {"Conversion de monedas", "Conversion de Temperatura"};
+    JComboBox<String> dropdown = new JComboBox<>(options);
         dropdown.setBounds(50,50,10,30);
-        MainPanel.add(dropdown);
+                MainPanel.add(dropdown);
 
-        //getContentPane().setBackground(new Color( 0xD8DFE8)); //Sets the background color
+                //getContentPane().setBackground(new Color( 0xD8DFE8)); //Sets the background color
 
 
-        //CREATE A BUTTON
-        JButton button = new JButton("Next");
-        button.setBounds(50,50, 50, 20);
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String selection = (String) dropdown.getSelectedItem();
-                if (selection.equals("Conversion de monedas")) {
-                    MoneyFrame money = new MoneyFrame();
-                    money.setVisible(true);
-                } else if (selection.equals("Conversion de Temperatura")){
+                //CREATE A BUTTON
+                JButton button = new JButton("Next");
+                button.setBounds(50,50, 50, 20);
+                button.addActionListener(new ActionListener() {
+@Override
+public void actionPerformed(ActionEvent e) {
+        String selection = (String) dropdown.getSelectedItem();
+        if (selection.equals("Conversion de monedas")) {
+        MoneyFrame money = new MoneyFrame();
+        money.setVisible(true);
+        } else if (selection.equals("Conversion de Temperatura")){
 
-                }
-            }
+        }
+        }
         });
         MainPanel.add(button);
 
         setVisible(true);
-    }
-}
+        }*/
