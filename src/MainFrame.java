@@ -21,7 +21,11 @@ public class MainFrame extends JFrame {
         String[] options = {"Conversion de Monedas", "Conversion de Temperatura"};
         JComboBox<String> dropdown = new JComboBox<>(options);
         dropdown.setBorder(BorderFactory.createEmptyBorder(5,10,5,10));
+        dropdown.setBackground(Color.WHITE);
         panel.add(dropdown);
+
+        JButton button = new JButton("Click Me");
+        panel.add(button);
 
         add(panel, BorderLayout.NORTH);
 
