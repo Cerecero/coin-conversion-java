@@ -41,7 +41,8 @@ public class MainFrame extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String selection = (String) dropdown.getSelectedItem();
                 if (selection.equals("Conversion de monedas")) {
-                    MoneyFrame money = new MoneyFrame();g
+                    MoneyFrame money = new MoneyFrame();
+                    money.setVisible(true);
                 } else if (selection.equals("Conversion de Temperatura")){
 
                 }
