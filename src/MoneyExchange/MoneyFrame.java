@@ -11,7 +11,9 @@ public class MoneyFrame extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-
+        JLabel label = new JLabel("Selecione la divisa");
+        panel.add(label);
+        
         setVisible(true);
 
     }
