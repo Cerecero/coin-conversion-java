@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 public class MainFrame extends JFrame {
     public MainFrame(){
         setTitle("MainFrame");
-        setSize(500,500);
+        setSize(450,200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
@@ -20,6 +20,7 @@ public class MainFrame extends JFrame {
 
         String[] options = {"Conversion de Monedas", "Conversion de Temperatura"};
         JComboBox<String> dropdown = new JComboBox<>(options);
+
         dropdown.setBorder(BorderFactory.createEmptyBorder(5,10,5,10));
         dropdown.setBackground(Color.WHITE);
         panel.add(dropdown);
