@@ -10,6 +10,8 @@ import java.awt.event.ActionListener;
 import java.text.NumberFormat;
 
 public class MoneyFrame extends JFrame {
+    private MoneyExchange moneyExchange = new MoneyExchange();
+    private ForeignExchangeToLocal foreignExchange = new ForeignExchangeToLocal();
     public MoneyFrame(){
         setTitle("Cambio de moneda.");
         setSize(500,500);
@@ -52,7 +54,61 @@ public class MoneyFrame extends JFrame {
         });
         panel.add(textField);
 
-        JButton exchange = new JButton();
+        JButton exchange = new JButton("Cambio");
+        exchange.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String input = textField.getText();
+                String selected = (String) dropdown.getSelectedItem();
+                double amount = Double.parseDouble(input);
+                double result = 0;
+
+                if (selected.equals("De MXN a USD")) {
+                    result = foreignExchange.ExchangeMXNtoUSD(amount);
+                } else if (selected.equals("De MXN a EURO")) {
+                    result = foreignExchange.ExchangeMXNtoEURO(amount);
+                } else if (selected.equals("De MXN a YEN")) {
+                    result = foreignExchange.ExchangeMXNtoYEN(amount);
+                } else if (selected.equals("De MXN a AUD")) {
+                    result = foreignExchange.ExchangeMXNtoAUD(amount);
+                } else if (selected.equals("De MXN a CAD")) {
+                    result = foreignExchange.ExchangeMXNtoCAD(amount);
+                } else if (selected.equals("De MXN a CHF")) {
+                    result = foreignExchange.ExchangeMXNtoCHF(amount);
+                } else if (selected.equals("De MXN a CNH")) {
+                    result = foreignExchange.ExchangeMXNtoCNH(amount);
+                } else if (selected.equals("De MXN a HKD")) {
+                    result = foreignExchange.ExchangeMXNtoHKD(amount);
+                } else if (selected.equals("De MXN a NZD")) {
+                    result = foreignExchange.ExchangeMXNtoNZD(amount);
+                } else if (selected.equals("De USD a MXN")) {
+                    result = moneyExchange.ExchangeUSDtoMXN(amount);
+                } else if (selected.equals("De EURO a MXN")) {
+                    result = moneyExchange.ExchangeEUROtoMXN(amount);
+                } else if (selected.equals("De YEN a MXN")) {
+                    result = moneyExchange.ExchangeYENtoMXN(amount);
+                } else if (selected.equals("De AUD a MXN")) {
+                    result = moneyExchange.ExchangeAUDtoMXN(amount);
+                } else if (selected.equals("De CAD a MXN")) {
+                    result = moneyExchange.ExchangeCADtoMXN(amount);
+                } else if (selected.equals("De CHF a MXN")) {
+                    result = moneyExchange.ExchangeCHFtoMXN(amount);
+                } else if (selected.equals("De CNH a MXN")) {
+                    result = moneyExchange.ExchangeCNHtoMXN(amount);
+                } else if (selected.equals("De HKD a MXN")) {
+                    result = moneyExchange.ExchangeHKDtoMXN(amount);
+                } else if (selected.equals("De NZD a MXN")) {
+                    result = moneyExchange.ExchangeNZDtoMXN(amount);
+                }
+
+                JFrame resultFrame = new JFrame();
+                JLabel resultLabel = new JLabel(String.format("%.2f", result));
+                resultFrame.add(resultLabel);
+                resultFrame.pack();
+                resultFrame.setVisible(true);
+            }
+        });
+        panel.add(exchange);
 
         add(panel);
         setVisible(true);

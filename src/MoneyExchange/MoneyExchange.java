@@ -57,6 +57,4 @@ public class MoneyExchange {
         NZDamount = (double) Math.round(NZDamount * 100d)/100;
         return NZDamount;
     }
-
-
 }
