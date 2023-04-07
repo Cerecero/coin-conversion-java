@@ -1,5 +1,6 @@
 package MoneyExchange;
 
+import javax.sql.XADataSource;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.DocumentEvent;
@@ -63,7 +64,66 @@ public class MoneyFrame extends JFrame {
                 double amount = Double.parseDouble(input);
                 double result = 0;
 
-                if (selected.equals("De MXN a USD")) {
+                switch (selected) {
+                    case "De MXN a USD":
+                        result = foreignExchange.ExchangeMXNtoUSD(amount);
+                        break;
+                    case "De MXN a EURO":
+                        result = foreignExchange.ExchangeMXNtoEURO(amount);
+                        break;
+                    case "De MXN a YEN":
+                        result = foreignExchange.ExchangeMXNtoYEN(amount);
+                        break;
+                    case "De MXN a AUD":
+                        result = foreignExchange.ExchangeMXNtoAUD(amount);
+                        break;
+                    case "De MXN a CAD":
+                        result = foreignExchange.ExchangeMXNtoCAD(amount);
+                        break;
+                    case "De MXN a CHF":
+                        result = foreignExchange.ExchangeMXNtoCHF(amount);
+                        break;
+                    case "De MXN a CNH":
+                        result = foreignExchange.ExchangeMXNtoCNH(amount);
+                        break;
+                    case "De MXN a HKD":
+                        result = foreignExchange.ExchangeMXNtoHKD(amount);
+                        break;
+                    case "De MXN a NZD":
+                        result = foreignExchange.ExchangeMXNtoNZD(amount);
+                        break;
+                    case "De USD a MXN":
+                        result = moneyExchange.ExchangeUSDtoMXN(amount);
+                        break;
+                    case "De EURO a MXN":
+                        result = moneyExchange.ExchangeEUROtoMXN(amount);
+                        break;
+                    case "De YEN a MXN":
+                        result = moneyExchange.ExchangeYENtoMXN(amount);
+                        break;
+                    case "De AUD a MXN":
+                        result = moneyExchange.ExchangeAUDtoMXN(amount);
+                        break;
+                    case "De CAD a MXN":
+                        result = moneyExchange.ExchangeCADtoMXN(amount);
+                        break;
+                    case "De CHF a MXN":
+                        result = moneyExchange.ExchangeCHFtoMXN(amount);
+                        break;
+                    case "De CNH a MXN":
+                        result = moneyExchange.ExchangeCNHtoMXN(amount);
+                        break;
+                    case "De HKD a MXN":
+                        result = moneyExchange.ExchangeHKDtoMXN(amount);
+                        break;
+                    case "De NZD a MXN":
+                        result = moneyExchange.ExchangeNZDtoMXN(amount);
+                        break;
+                    default:
+                        System.out.println("Invalid selection");
+                        break;
+                }
+                /*if (selected.equals("De MXN a USD")) {
                     result = foreignExchange.ExchangeMXNtoUSD(amount);
                 } else if (selected.equals("De MXN a EURO")) {
                     result = foreignExchange.ExchangeMXNtoEURO(amount);
@@ -99,7 +159,7 @@ public class MoneyFrame extends JFrame {
                     result = moneyExchange.ExchangeHKDtoMXN(amount);
                 } else if (selected.equals("De NZD a MXN")) {
                     result = moneyExchange.ExchangeNZDtoMXN(amount);
-                }
+                }*/
 
                 JFrame resultFrame = new JFrame();
                 JLabel resultLabel = new JLabel(String.format("%.2f", result));
