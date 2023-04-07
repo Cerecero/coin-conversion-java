@@ -15,7 +15,7 @@ public class MoneyFrame extends JFrame {
         panel.add(label);
 
 
-
+        add(panel);
         setVisible(true);
 
     }
