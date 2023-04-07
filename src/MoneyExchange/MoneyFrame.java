@@ -8,7 +8,7 @@ public class MoneyFrame extends JFrame {
     public MoneyFrame(){
         setTitle("Cambio de moneda.");
         setSize(500,500);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         JLabel label = new JLabel("Selecione la divisa");
