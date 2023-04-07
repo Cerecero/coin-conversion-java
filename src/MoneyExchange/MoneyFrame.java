@@ -13,16 +13,20 @@ public class MoneyFrame extends JFrame {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         JLabel label = new JLabel("Selecione la divisa");
+        panel.add(label);
+
         String[] options = {"De MXN a USD","De MXN a EURO","De MXN a YEN","De MXN a AUD","De MXN a CAD","De MXN a CHF","De MXN a CNH","De MXN a HKD","De MXN a NZD", "De USD a MXN","De EURO a MXN","De YEN a MXN","De AUD a MXN","De CAD a MXN","De USD a CHF","De CNH a MXN","De HKD a MXN","De NZD a MXN"};
         JComboBox<String> dropdown = new JComboBox<>(options);
         panel.add(dropdown);
 
-        panel.add(label);
+        JLabel labelAmount = new JLabel("Ingrese la cantidad a convertir: ");
+        panel.add(labelAmount);
 
         JTextField textField = new JTextField(1);
         textField.setBorder(new EmptyBorder(new Insets(0,210,10,10)));
         panel.add(textField);
 
+        JButton exchange = new JButton();
 
         add(panel);
         setVisible(true);
