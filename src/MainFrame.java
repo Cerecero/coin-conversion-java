@@ -25,7 +25,13 @@ public class MainFrame extends JFrame {
         dropdown.setBackground(Color.WHITE);
         panel.add(dropdown);
 
-        JButton button = new JButton("Click Me");
+        JButton button = new JButton("Siguiente");
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MoneyFrame moneyFrame = new MoneyFrame();
+            }
+        });
         panel.add(button);
 
         add(panel, BorderLayout.NORTH);

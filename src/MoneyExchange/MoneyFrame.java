@@ -13,7 +13,9 @@ public class MoneyFrame extends JFrame {
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         JLabel label = new JLabel("Selecione la divisa");
         panel.add(label);
-        
+
+
+
         setVisible(true);
 
     }
