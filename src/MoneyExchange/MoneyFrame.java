@@ -17,6 +17,7 @@ public class MoneyFrame extends JFrame {
         setTitle("Cambio de moneda.");
         setSize(500,500);
         setLayout(new GridLayout(3 , 1 , 0, 0));
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         JLabel label = new JLabel("Selecione la divisa");
@@ -126,6 +127,8 @@ public class MoneyFrame extends JFrame {
 
                 JFrame resultFrame = new JFrame();
                 JLabel resultLabel = new JLabel(String.format("%.2f", result));
+                resultFrame.setSize(100,100);
+                resultFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 resultFrame.add(resultLabel);
                 resultFrame.pack();
                 resultFrame.setVisible(true);
