@@ -2,6 +2,8 @@ package MoneyExchange;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -31,7 +33,23 @@ public class MoneyFrame extends JFrame {
         panel.add(labelAmount);
 
         JTextField textField = new JTextField(1);
-        textField.setBorder(new EmptyBorder(new Insets(0,210,10,10)));
+        //textField.setBorder(new EmptyBorder(new Insets(0,210,10,10)));
+        textField.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                String input = textField.getText();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                String input = textField.getText();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                String input = textField.getText();
+            }
+        });
         panel.add(textField);
 
         JButton exchange = new JButton();
