@@ -3,6 +3,8 @@ package MoneyExchange;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.text.NumberFormat;
 
 public class MoneyFrame extends JFrame {
@@ -17,6 +19,12 @@ public class MoneyFrame extends JFrame {
 
         String[] options = {"De MXN a USD","De MXN a EURO","De MXN a YEN","De MXN a AUD","De MXN a CAD","De MXN a CHF","De MXN a CNH","De MXN a HKD","De MXN a NZD", "De USD a MXN","De EURO a MXN","De YEN a MXN","De AUD a MXN","De CAD a MXN","De USD a CHF","De CNH a MXN","De HKD a MXN","De NZD a MXN"};
         JComboBox<String> dropdown = new JComboBox<>(options);
+        dropdown.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String selected = (String) dropdown.getSelectedItem();
+            }
+        });
         panel.add(dropdown);
 
         JLabel labelAmount = new JLabel("Ingrese la cantidad a convertir: ");
