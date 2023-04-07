@@ -29,7 +29,7 @@ public class MainFrame extends JFrame {
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                MoneyFrame moneyFrame = new MoneyFrame();
+                new MoneyFrame();
             }
         });
         panel.add(button);
