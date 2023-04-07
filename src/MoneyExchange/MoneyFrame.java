@@ -127,7 +127,8 @@ public class MoneyFrame extends JFrame {
 
                 JFrame resultFrame = new JFrame();
                 JLabel resultLabel = new JLabel(String.format("%.2f", result));
-                resultFrame.setSize(100,100);
+                Dimension preferredSize = new Dimension(200,100);
+                resultFrame.setPreferredSize(preferredSize);
                 resultFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 resultFrame.add(resultLabel);
                 resultFrame.pack();
