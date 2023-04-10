@@ -1,4 +1,5 @@
 import MoneyExchange.MoneyFrame;
+import TemperatureConversion.TemperatureFrame;
 import com.sun.tools.javac.Main;
 
 import javax.management.modelmbean.ModelMBeanAttributeInfo;
@@ -36,8 +37,9 @@ public class MainFrame extends JFrame {
                     case "Conversion de Monedas":
                         new MoneyFrame();
                         break;
-                    //case "Conversion de Temperatura":
-
+                    case "Conversion de Temperatura":
+                        new TemperatureFrame();
+                        break;
                 }
             }
         });
