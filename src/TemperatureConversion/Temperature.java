@@ -22,6 +22,14 @@ public class Temperature {
         double KELVIN = (input - 32) * 5/9 + 273.15 + 32;
         return KELVIN;
     }
+    public double KelvintoCelsius(double input){
+        double CELSIUS = input - 273.15;
+        return CELSIUS;
+    }
+    public double KelvintoFahrenheit(double input){
+        double FAHRENHEIT = (input - 273.15) * 9/5 + 32;
+        return FAHRENHEIT;
+    }
 
 
 
