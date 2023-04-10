@@ -10,8 +10,6 @@ public class TemperatureFrame extends JFrame {
         setLayout(new GridLayout(3 , 1 , 0, 0));
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
-
-
         setVisible(true);
 
     }
