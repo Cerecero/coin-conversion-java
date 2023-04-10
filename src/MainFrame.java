@@ -29,7 +29,16 @@ public class MainFrame extends JFrame {
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new MoneyFrame();
+                //new MoneyFrame();
+                String selected = (String) dropdown.getSelectedItem();
+                double result = 0;
+                switch (selected){
+                    case "Conversion de Monedas":
+                        new MoneyFrame();
+                        break;
+                    //case "Conversion de Temperatura":
+
+                }
             }
         });
         panel.add(button);
