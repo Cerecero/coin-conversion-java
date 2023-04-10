@@ -11,7 +11,7 @@ public class Temperature {
         return KELVIN;
     }
     public double CelsiustoFahrenheit(double input){
-        double FAHRENHEIT = (9/5) * input + 32;
+        double FAHRENHEIT = (input * 9/5) + 32;
         return FAHRENHEIT;
     }
 
