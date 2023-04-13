@@ -9,6 +9,8 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 public class TemperatureFrame extends JFrame {
+
+    private final Temperature tempConversion = new Temperature();
     public TemperatureFrame() {
         setTitle("Cambio de Temperatura");
         setSize(500,500);
@@ -29,8 +31,14 @@ public class TemperatureFrame extends JFrame {
         inputCelsius.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e){
+                String input = inputCelsius.getText();
+                double temperature = Double.parseDouble(input);
+                double TempKelvin = tempConversion.CelsiustoKelvin(temperature);
+                double TempFahrenheit = tempConversion.CelsiustoFahrenheit(temperature);
+
                 if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-                    inputKelvin.setText("test");
+                    inputKelvin.setText(TempKelvin+ "°");
+                    inputFarenheit.setText(TempFahrenheit+"°");
                 }
             }
         });

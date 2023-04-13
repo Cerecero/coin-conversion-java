@@ -1,10 +1,14 @@
 import javax.swing.*;
 import java.awt.*;
 import MoneyExchange.MoneyFrame;
+import TemperatureConversion.TemperatureFrame;
+
 class gui{
     public static void main(String args[]){
 
-        MainFrame frame = new MainFrame();
+        //MainFrame frame = new MainFrame();
         //MoneyFrame money = new MoneyFrame();
+
+        TemperatureFrame temperatureFrame = new TemperatureFrame();
     }
 }
