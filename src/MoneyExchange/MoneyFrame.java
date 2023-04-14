@@ -53,6 +53,7 @@ public class MoneyFrame extends JFrame {
 
         JTextField textField = new JTextField(1);
         //textField.setBorder(new EmptyBorder(new Insets(0,210,10,10)));
+        textField.setPreferredSize(new Dimension(200,30));
         textField.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
@@ -71,6 +72,8 @@ public class MoneyFrame extends JFrame {
         });
         c.gridx = 0;
         c.gridwidth = 3;
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.insets = new Insets(10,10,10,10);
         c.gridy = 3;
         panel.add(textField,c);
 
@@ -155,6 +158,7 @@ public class MoneyFrame extends JFrame {
         });
         c.gridx = 1;
         c.gridwidth = 3;
+        c.fill = GridBagConstraints.NONE;
         c.gridy = 4;
         panel.add(exchange,c );
 
