@@ -52,7 +52,7 @@ public class TemperatureFrame extends JFrame {
 
                 if (e.getKeyCode() == KeyEvent.VK_ENTER) {
                     inputKelvin.setText(TempKelvin+ "°");
-                    inputFarenheit.setText(TempCelsius+"°");
+                    inputCelsius.setText(TempCelsius+"°");
                 }
             }
         });
