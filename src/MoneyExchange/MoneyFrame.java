@@ -16,12 +16,21 @@ public class MoneyFrame extends JFrame {
     public MoneyFrame(){
         setTitle("Cambio de moneda.");
         setSize(500,500);
-        setLayout(new GridLayout(3 , 1 , 0, 0));
+        //setLayout(new GridLayout(3 , 1 , 0, 0));
+        //setLayout(new GridBagLayout());
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         JPanel panel = new JPanel();
-        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+        //panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+        panel.setLayout(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
+        c.weightx = 1;
+        c.weighty = 1;
+        c.fill = GridBagConstraints.NONE;
         JLabel label = new JLabel("Selecione la divisa");
-        panel.add(label);
+        c.gridx = 0;
+        c.gridwidth = 3;
+        c.gridy = 0;
+        panel.add(label, c);
 
         String[] options = {"De MXN a USD","De MXN a EURO","De MXN a YEN","De MXN a AUD","De MXN a CAD","De MXN a CHF","De MXN a CNH","De MXN a HKD","De MXN a NZD", "De USD a MXN","De EURO a MXN","De YEN a MXN","De AUD a MXN","De CAD a MXN","De USD a CHF","De CNH a MXN","De HKD a MXN","De NZD a MXN"};
         JComboBox<String> dropdown = new JComboBox<>(options);
@@ -31,10 +40,16 @@ public class MoneyFrame extends JFrame {
                 String selected = (String) dropdown.getSelectedItem();
             }
         });
-        panel.add(dropdown);
+        c.gridx = 0;
+        c.gridwidth = 3;
+        c.gridy = 1;
+        panel.add(dropdown,c);
 
         JLabel labelAmount = new JLabel("Ingrese la cantidad a convertir: ");
-        panel.add(labelAmount);
+        c.gridx = 0;
+        c.gridwidth = 3;
+        c.gridy = 2;
+        panel.add(labelAmount,c);
 
         JTextField textField = new JTextField(1);
         //textField.setBorder(new EmptyBorder(new Insets(0,210,10,10)));
@@ -54,7 +69,10 @@ public class MoneyFrame extends JFrame {
                 String input = textField.getText();
             }
         });
-        panel.add(textField);
+        c.gridx = 0;
+        c.gridwidth = 3;
+        c.gridy = 3;
+        panel.add(textField,c);
 
         JButton exchange = new JButton("Cambio");
         exchange.addActionListener(new ActionListener() {
@@ -135,7 +153,10 @@ public class MoneyFrame extends JFrame {
                 resultFrame.setVisible(true);
             }
         });
-        panel.add(exchange);
+        c.gridx = 1;
+        c.gridwidth = 3;
+        c.gridy = 4;
+        panel.add(exchange,c );
 
         add(panel);
         setVisible(true);
