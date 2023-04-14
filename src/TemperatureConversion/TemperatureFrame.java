@@ -42,6 +42,20 @@ public class TemperatureFrame extends JFrame {
                 }
             }
         });
+        inputFarenheit.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e){
+                String input = inputFarenheit.getText();
+                double temperature = Double.parseDouble(input);
+                double TempKelvin = tempConversion.FahrenheittoKelvin(temperature);
+                double TempCelsius = tempConversion.FahrenheittoCelsius(temperature);
+
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    inputKelvin.setText(TempKelvin+ "°");
+                    inputFarenheit.setText(TempCelsius+"°");
+                }
+            }
+        });
 
         add(panel, BorderLayout.NORTH);
 
