@@ -21,8 +21,14 @@ public class TemperatureFrame extends JFrame {
         JTextField inputFarenheit = new JTextField();
         JTextField inputKelvin = new JTextField();
 
+        JLabel labelCelsius = new JLabel("Celsius");
+        panel.add(labelCelsius);
         panel.add(inputCelsius);
+        JLabel labelFarenheit = new JLabel("Farenheit");
+        panel.add(labelFarenheit);
         panel.add(inputFarenheit);
+        JLabel labelKelvin = new JLabel("Kelvin");
+        panel.add(labelKelvin);
         panel.add(inputKelvin);
 
         inputCelsius.addKeyListener(new KeyAdapter() {
