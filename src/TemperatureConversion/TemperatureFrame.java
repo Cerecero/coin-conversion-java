@@ -3,10 +3,7 @@ package TemperatureConversion;
 import javax.swing.*;
 import javax.swing.event.DocumentListener;
 import java.awt.*;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+import java.awt.event.*;
 
 public class TemperatureFrame extends JFrame {
 
@@ -68,6 +65,13 @@ public class TemperatureFrame extends JFrame {
                     inputFarenheit.setText(TempFahrenheit+ "°");
                     inputCelsius.setText(TempCelsius+"°");
                 }
+            }
+        });
+        inputCelsius.addFocusListener(new FocusAdapter() {
+            @Override
+            public void focusLost(FocusEvent e){
+                inputKelvin.setText("");
+                inputFarenheit.setText("");
             }
         });
 
