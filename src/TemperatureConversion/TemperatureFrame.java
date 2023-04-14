@@ -70,6 +70,15 @@ public class TemperatureFrame extends JFrame {
         inputCelsius.addFocusListener(new FocusAdapter() {
             @Override
             public void focusLost(FocusEvent e){
+                inputCelsius.setText("");
+                inputKelvin.setText("");
+                inputFarenheit.setText("");
+            }
+        });
+        inputFarenheit.addFocusListener(new FocusAdapter() {
+            @Override
+            public void focusLost(FocusEvent e){
+                inputCelsius.setText("");
                 inputKelvin.setText("");
                 inputFarenheit.setText("");
             }
