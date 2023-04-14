@@ -83,6 +83,14 @@ public class TemperatureFrame extends JFrame {
                 inputFarenheit.setText("");
             }
         });
+        inputKelvin.addFocusListener(new FocusAdapter() {
+            @Override
+            public void focusLost(FocusEvent e){
+                inputCelsius.setText("");
+                inputKelvin.setText("");
+                inputFarenheit.setText("");
+            }
+        });
 
         add(panel, BorderLayout.NORTH);
 
