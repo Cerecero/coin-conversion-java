@@ -14,17 +14,28 @@ public class MainFrame extends JFrame {
         setSize(450,200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel panel = new JPanel();
-        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-        JLabel label = new JLabel("Selecione el tipo de conversion que desea: ");
+        //panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+        panel.setLayout(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
+        c.weightx = 1;
+        c.weighty = 1;
+        c.fill = GridBagConstraints.HORIZONTAL;
 
-        panel.add(label);
+        JLabel label = new JLabel("Selecione el tipo de conversion que desea: ");
+        c.gridx = 0;
+        c.gridwidth = 3;
+        c.gridy = 0;
+        panel.add(label,c);
 
         String[] options = {"Conversion de Monedas", "Conversion de Temperatura"};
         JComboBox<String> dropdown = new JComboBox<>(options);
+        c.gridx = 0;
+        c.gridwidth = 3;
+        c.gridy = 1;
 
         dropdown.setBorder(BorderFactory.createEmptyBorder(5,10,5,10));
         dropdown.setBackground(Color.WHITE);
-        panel.add(dropdown);
+        panel.add(dropdown, c);
 
         JButton button = new JButton("Siguiente");
         button.addActionListener(new ActionListener() {
@@ -43,9 +54,13 @@ public class MainFrame extends JFrame {
                 }
             }
         });
-        panel.add(button);
+        c.gridx = 0;
+        c.gridwidth = 3;
+        c.gridy = 2;
+        panel.add(button, c);
 
-        add(panel, BorderLayout.NORTH);
+        //add(panel, BorderLayout.NORTH);
+        add(panel);
 
         setVisible(true);
     }
